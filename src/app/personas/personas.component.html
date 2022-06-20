@@ -1,0 +1,14 @@
+<div>
+    Agregar Persona
+    <button class="btn btn-primary" (click)="agregar()">+</button>
+</div>
+<!-- <hr/> -->
+<!-- <app-formulario></app-formulario> -->
+<hr/>
+<app-persona 
+*ngFor="let personaElemento of personas; let i = index;" 
+[persona_hijo] = "personaElemento" 
+[indice_hijo] = "i">
+</app-persona>
+<hr>
+<router-outlet></router-outlet>

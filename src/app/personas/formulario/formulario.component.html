@@ -1,0 +1,16 @@
+<div>
+<h2>Ingresa los datos</h2>
+</div>
+<form class="form-control" #f="ngForm" (ngSubmit)="f.form.valid && guardarPersona()">
+              <!-- <label for="nombre">Nombre</label> -->
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control" [(ngModel)] = "nombreInput" required />
+              <!-- <label for="nombre">Nombre</label> -->
+        <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="form-control" [(ngModel)] = "apellidoInput" required /> 
+              <!-- <label for="nombre">Nombre</label> -->
+        <button type="submit" id="apellido" class="btn btn-primary" (click)= "guardarPersona()">
+          Guardar
+        </button>
+        <button  *ngIf="index != null" type="button" id="apellido" class="btn btn-warning" (click)= "eliminarPersona()">
+          Eliminar
+        </button>
+  </form>

@@ -1,0 +1,11 @@
+<div class="contaie">
+    <form class="item" #formulario="ngForm" (ngSubmit)="formulario.form.valid && login(formulario)">
+        <div>
+            <input type="email" name="email" id="email" placeholder="Email" ngModel required size="20"/>
+        </div>
+        <div>
+            <input type="password" name="password" id="password" placeholder="Password" required ngModel>
+        </div>
+        <input type="submit" style="cursor:pointer">
+    </form>
+</div>
